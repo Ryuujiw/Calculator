@@ -10,4 +10,10 @@
         public const char OP_DIVIDE = '/';
         public const char OP_DECIMAL = '.';
     }
+
+    public static class Messages
+    {
+        public const string InvalidExpression = "Invalid expression";
+        public const string InvalidOperator = "Invalid operator: ";
+    }
 }

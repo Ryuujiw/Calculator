@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace Calculator.Test
@@ -46,6 +47,17 @@ namespace Calculator.Test
             var computedResult = calculator.Calculate(expression);
             // Assert
             Assert.Equal(expectedResult, computedResult);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionWhenIsAnInvalidExpression()
+        {
+            // Arrange
+            var calculator = new Calculator();
+            var expression = "test";
+            // Act
+            // Assert
+            Assert.Throws<Exception>(() => calculator.Calculate(expression));
         }
     }
 }

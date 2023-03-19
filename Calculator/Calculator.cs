@@ -19,14 +19,17 @@
                     {
                         if (stack.Count < 2)
                         {
-                            throw new Exception("Invalid expression");
+                            throw new Exception(Messages.InvalidExpression);
                         }
                         var rhs = stack.Pop();
                         var lhs = stack.Pop();
                         stack.Push(Calculate(lhs, rhs, char.Parse(token)));
                     }
                 }
-
+                if (stack.Count == 0)
+                {
+                    throw new Exception(Messages.InvalidExpression);
+                }
                 return stack.Pop();
             }
             catch (Exception)
@@ -43,7 +46,7 @@
                 Constants.OP_MINUS => lhs - rhs,
                 Constants.OP_MULTIPLY => lhs * rhs,
                 Constants.OP_DIVIDE => lhs / rhs,
-                _ => throw new Exception("Invalid operator: " + op.ToString()),
+                _ => throw new Exception(Messages.InvalidOperator + op.ToString()),
             };
         }
     }
