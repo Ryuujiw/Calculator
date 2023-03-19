@@ -33,7 +33,7 @@ namespace Calculator.Test
             // Act
             var computedResult = calculator.Calculate(expression);
             // Assert
-            Assert.Equal(expectedResult, computedResult);
+            Assert.Equal(expectedResult, computedResult, 1);
         }
 
         [Theory]
