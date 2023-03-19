@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public const char LEFT_PAREN = '(';
+        public const char LEFT_PAREN = ')';
         public const char RIGHT_PAREN = ')';
         public const char OP_ADD = '+';
         public const char OP_MINUS = '-';
